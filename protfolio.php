@@ -5,8 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tailwind Navbar</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Mono+One&display=swap" rel="stylesheet">
 </head>
 <style>
+.rubik-mono-one-regular {
+  font-family: "Rubik Mono One", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 /* Hide default scroll bar but allow scroll */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -47,6 +57,11 @@
   background: #262626;
   background: linear-gradient(90deg, rgba(38, 38, 38, 1) 0%, rgba(112, 108, 108, 1) 100%);
 }
+.menu{
+  background: #262626;
+  background: linear-gradient(90deg, rgba(38, 38, 38, 1) 0%, rgba(112, 108, 108, 1) 100%);
+}
+
 </style>
 <body class="bg-black">
 
@@ -62,12 +77,12 @@
 <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 z-10"></div>
 
 <!-- ✨ Text Content -->
-<div class="relative z-20 ">
+<div class="relative z-20">
   <nav class="md:max-w-425 md:ms-[200px]">
     <div class="md:max-w-7xl md:mx-auto">
       <div class="ms-10 md:flex">
-        <div class="mt-[28px] md:ms-[-10px]">
-          <a href="#" class="md:flex text-[20px] md:text-[23px] font-bold text-white text_tailwind">KKZY</a>
+        <div class="mt-[28px] md:ms-[-100px]">
+          <a href="#" class="md:flex text-[20px] md:text-[23px] font-bold text-white text_tailwind font-serif">Kaung Khant Zayar</a>
           <!-- <img src="image/computer_logo.png" alt="" class="w-[60px] text_tailwind"> -->
         </div>
         <div class="md:flex space-x-2 mt-[28px] ms-[550px]">
@@ -83,18 +98,18 @@
 
   <div class="relative">
     <div class="ms-[340px] mt-[-200px] md:hidden">
-      <svg id="dropdownButton" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list text-white" viewBox="0 0 16 16">
+      <svg id="dropdownButton" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-list text-white menu_btn hover:rotate-90 transition duration-700 ease-in-out" viewBox="0 0 16 16" style="cursor:pointer;">
         <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
       </svg>
     </div>
 
-     <div id="dropdownMenu" class="mt-3 ms-2 w-48 bg-gray-200 rounded shadow-lg opacity-0 scale-95 pointer-events-none transition-all duration-200">
-       <a href="#" class="block px-4 py-2 hover:bg-gray-100">Home</a>
-       <a href="#about" class="block px-4 py-2 hover:bg-gray-100">About</a>
-       <a href="#skills" class="block px-4 py-2 hover:bg-gray-100">Skill</a>
-       <a href="#service" class="block px-4 py-2 hover:bg-gray-100">Services</a>
-       <a href="#project" class="block px-4 py-2 hover:bg-gray-100">Projects</a>
-       <a href="#content" class="block px-4 py-2 hover:bg-gray-100">Contact</a>
+     <div id="dropdownMenu" class="mt-5 ms-5 w-[200px] rounded shadow-lg opacity-0 scale-95 pointer-events-none  border-2 border-white hover:border-2 border-white hover:text-white transition duration-700 ease-in-out menu">
+       <a href="#" class="block px-4 py-2 text-gray-300 hover:ms-[20px] hover:text-white hover:transition duration-700 ease-in-out">Home</a>
+       <a href="#about" class="block px-4 py-2 text-gray-300 hover:ms-[20px] hover:text-white hover:transition duration-700 ease-in-out">About</a>
+       <a href="#skills" class="block px-4 py-2 text-gray-300 hover:ms-[20px] hover:text-white hover:transition duration-700 ease-in-out">Skill</a>
+       <a href="#service" class="block px-4 py-2 text-gray-300 hover:ms-[20px] hover:text-white hover:transition duration-700 ease-in-out">Services</a>
+       <a href="#project" class="block px-4 py-2 text-gray-300 hover:ms-[20px] hover:text-white hover:transition duration-700 ease-in-out">Projects</a>
+       <a href="#content" class="block px-4 py-2 text-gray-300 hover:ms-[20px] hover:text-white hover:transition duration-700 ease-in-out">Contact</a>
      </div>
    </div>
 
@@ -113,7 +128,7 @@
 
 
   <div class="mt-[100px] md:mt-[150px]">
-    <p class="text-[18px] md:text-[25px] font-bold text-center mt-2 font-serif text-white text_tailwind">Hello, I'm Kaung Khant Zayar</p>
+    <p class="text-[18px] md:text-[30px] font-bold text-center mt-2 font-serif text-white text_tailwind"><b>Hello, I'm Kaung Khant Zayar</b></p>
     <p class="text-[17px] md:text-[20px] font-bold text-center mt-2 font-serif text-white text_tailwind">I am Web Developer</p>
     <a href="#"><button class="text_tailwind bg-white border-2 border-white hover:border-2 border-white hover:bg-transparent hover:text-white transition duration-700 ease-in-out p-2 ms-[140px] mt-5 text-[16px] md:text-black md:p-3 font-serif md:ms-[683px] md:mt-5 md:bg-white md:border-2 md:border-white md:hover:border-2 md:border-white md:hover:bg-transparent md:hover:text-white transition duration-700 ease-in-out"><b>More About Me</b></button></a>
   </div>
@@ -561,9 +576,10 @@
     <div class="pt-10 footer_div">
       <div class="pb-[20px] md:grid grid-cols-3 md:ps-[100px] md:pt-[50px] md:pb-[50px]">
         <div class="md:ms-[-90px]">
-          <a href="#"><video autoplay muted loop playsinline style="height: auto;" class="ms-20 w-[270px] md:w-[300px]  border-2 border-white">
+          <!-- <a href="#"><video autoplay muted loop playsinline style="height: auto;" class="ms-20 w-[270px] md:w-[300px]  border-2 border-white">
             <source src="video/my_video.mp4" type="video/mp4">
-            </video></a>
+            </video></a> -->
+            <img src="image2/photo6.jpg" alt="" class="ms-20 w-[270px] md:w-[300px]  border-2 border-white rounded-lg">
         </div>
         <div class="ms-[110px] mt-[30px] md:mt-20 md:ms-[-50px]">
           <h4 class="text-[20px] md:text-[30px] text-white font-serif"><b>Kaung Khant Zayar</b></h4>
